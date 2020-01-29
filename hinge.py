@@ -46,15 +46,12 @@ class Hinge(object):
         auth_token = identity_json['token']
 
         self.headers['Authorization'] = f'Bearer {auth_token}'
-
         return auth_token
 
     def get_feed(self):
 
         url = 'https://prod-api.hingeaws.net/potential'
         feed = requests.get(url, headers=self.headers)
-
-        print(feed.json())
         return feed.json()
 
     def get_profile(self, subjects):

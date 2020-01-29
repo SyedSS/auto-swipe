@@ -8,7 +8,7 @@
 4. Create a file called `config.py` with your FB creds:
 
 ```
-FB_USER='your_username'
+FB_EMAIL='your_email'
 FB_PASS='your_password'
 ```
 
