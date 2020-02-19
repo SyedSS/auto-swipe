@@ -30,7 +30,7 @@ def run():
         swipe = hinge.swipe(subject)
         print(swipe)
 
-        time.sleep(5)
+        time.sleep(10)
 
     return run()
 

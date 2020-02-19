@@ -11,13 +11,13 @@ class Hinge(object):
         self.headers = {
             'content-type': 'application/json',
             'x-device-platform': 'iOS',
-            'x-session-id': '3E3CCF47-BF71-4F2C-A1D4-D99C9C980F95',
-            'x-install-id': 'FC9E889B-9DF2-4AC1-B716-64CAC5A8EAEA',
+            'x-session-id': 'AAB3F860-29AB-4847-973E-9C687D6FE1DD',
+            'x-install-id': 'B4D7C24A-A126-48FA-ACFF-C239FC7661B8',
             'accept-language': 'en-us',
             'accept-encoding': 'gzip, deflate, br',
-            'x-build-number': '11098',
-            'user-agent': 'Hinge/11098 CFNetwork/1121.2.2 Darwin/19.2.0',
-            'x-app-version': '7.12.2',
+            'x-build-number': '11102',
+            'user-agent': 'Hinge/11102 CFNetwork/1121.2.2 Darwin/19.2.0',
+            'x-app-version': '7.13.0',
             'x-os-version': '13.3',
             'x-device-model': 'iPhone 7 Plus',
             'Authorization': None
@@ -30,7 +30,7 @@ class Hinge(object):
         request_body = {
             "facebookId": "10152933244684657",
             "facebookToken": None,
-            "installId": "FC9E889B-9DF2-4AC1-B716-64CAC5A8EAEA"
+            "installId": "B4D7C24A-A126-48FA-ACFF-C239FC7661B8"
         }
 
         request_body['facebookToken'] = str(get_access_token())
@@ -52,6 +52,7 @@ class Hinge(object):
 
         url = 'https://prod-api.hingeaws.net/potential'
         feed = requests.get(url, headers=self.headers)
+        print(feed.json())
         return feed.json()
 
     def get_profile(self, subjects):
